@@ -25,9 +25,11 @@ CREATE TABLE `bitacora` (
   `usuario` varchar(50) NOT NULL,
   `fecharegistro` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `bitacora` */
+
+insert  into `bitacora`(`id`,`usuario`,`fecharegistro`) values (1,'Oscar','2021-04-27 04:04:37');
 
 /*Table structure for table `usuarios` */
 
@@ -44,11 +46,11 @@ CREATE TABLE `usuarios` (
   `fechamodificacion` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`id`,`usuario`,`password`,`tipousuario`,`sexo`,`fecharegistro`,`horaregistro`,`fechamodificacion`) values (1,'Oscar','202cb962ac59075b964b07152d234b70','Admin','Masculino','2021-04-27','00:00:00','2021-04-27 09:21:54'),(2,'Jorge','202cb962ac59075b964b07152d234b70','Basic','Masculino','2021-04-27','00:00:00','2021-04-27 10:27:10');
+insert  into `usuarios`(`id`,`usuario`,`password`,`tipousuario`,`sexo`,`fecharegistro`,`horaregistro`,`fechamodificacion`) values (1,'Oscar','202cb962ac59075b964b07152d234b70','Admin','Masculino','2021-04-27','09:07:00','2021-04-27 09:21:54'),(2,'Jorge','202cb962ac59075b964b07152d234b70','Basic','Masculino','2021-04-27','09:12:00','2021-04-27 10:27:10');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
